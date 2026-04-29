@@ -3,14 +3,14 @@
     "channel":  "stable",
     "generatedAt":  "2026-04-29T15:20:54.368Z",
     "announcement":  {
-                         "uuid":  "initial-feed",
+                         "uuid":  "08c03dff34bed30768a",
                          "title":  "公告源初始化",
                          "body":  "Windsurf Manager Plugin 公告和更新源已初始化。",
                          "level":  "info"
                      },
     "update":  {
                    "latestVersion":  "0.1.3",
-                   "minVersion":  "0.1.0",
+                   "minVersion":  "0.1.3",
                    "required":  false,
                    "releaseTag":  "windsurf-manager-v0.1.3",
                    "releaseUrl":  "https://github.com/yuaotian/windsurf_manager_plugin/releases/tag/windsurf-manager-v0.1.3",
