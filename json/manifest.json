@@ -1,7 +1,7 @@
 ﻿{
     "schemaVersion":  1,
     "channel":  "stable",
-    "generatedAt":  "2026-04-28T17:55:13.122Z",
+    "generatedAt":  "2026-04-29T08:11:41.000Z",
     "announcement":  {
                          "uuid":  "initial-feed",
                          "title":  "公告源初始化",
@@ -9,14 +9,14 @@
                          "level":  "info"
                      },
     "update":  {
-                   "latestVersion":  "0.1.0",
+                   "latestVersion":  "0.1.1",
                    "minVersion":  "0.1.0",
                    "required":  false,
-                   "releaseTag":  "windsurf-manager-v0.1.0",
-                   "releaseUrl":  "https://github.com/yuaotian/windsurf_manager_plugin/releases/tag/windsurf-manager-v0.1.0",
-                   "assetName":  "windsurf-manager-0.1.0.vsix",
-                   "assetUrl":  "https://github.com/yuaotian/windsurf_manager_plugin/releases/download/windsurf-manager-v0.1.0/windsurf-manager-0.1.0.vsix",
-                   "sha256":  "8ff5e4b78600b7bb22e72db5cc0fe8bfc82a2caf7ebe924f2d566d6016a956f1",
-                   "notes":  "由 publish-public-release.ps1 于 2026-04-28T17:55:13.122Z 更新。"
+                   "releaseTag":  "windsurf-manager-v0.1.1",
+                   "releaseUrl":  "https://github.com/yuaotian/windsurf_manager_plugin/releases/tag/windsurf-manager-v0.1.1",
+                   "assetName":  "windsurf-manager-0.1.1.vsix",
+                   "assetUrl":  "https://github.com/yuaotian/windsurf_manager_plugin/releases/download/windsurf-manager-v0.1.1/windsurf-manager-0.1.1.vsix",
+                   "sha256":  "0e8e2376d2e7c5933a51477c9fc0397993a1d551e0bbb8022ae9448f335388b2",
+                   "notes":  "由 publish-public-release.ps1 于 2026-04-29T08:11:41.000Z 更新。"
                }
 }
