@@ -1,7 +1,7 @@
 ﻿{
     "schemaVersion":  1,
     "channel":  "stable",
-    "generatedAt":  "2026-04-29T08:11:41.000Z",
+    "generatedAt":  "2026-04-29T08:36:09.183Z",
     "announcement":  {
                          "uuid":  "initial-feed",
                          "title":  "公告源初始化",
@@ -16,7 +16,7 @@
                    "releaseUrl":  "https://github.com/yuaotian/windsurf_manager_plugin/releases/tag/windsurf-manager-v0.1.1",
                    "assetName":  "windsurf-manager-0.1.1.vsix",
                    "assetUrl":  "https://github.com/yuaotian/windsurf_manager_plugin/releases/download/windsurf-manager-v0.1.1/windsurf-manager-0.1.1.vsix",
-                   "sha256":  "0e8e2376d2e7c5933a51477c9fc0397993a1d551e0bbb8022ae9448f335388b2",
-                   "notes":  "由 publish-public-release.ps1 于 2026-04-29T08:11:41.000Z 更新。"
+                   "sha256":  "04eced592bb717210a362a0c1ed1120263a1b8ee56eee505438bb727b21c6378",
+                   "notes":  "# windsurf-manager v0.1.1\n\n## Commits\n\n### 7459471 初始化\n\n### 46efe59 初始化\n\n### 3f10624 ~~~ chore(build): 更新 .gitignore 配置\n\n添加了更多需要忽略的文件和目录，包括：\n- 构建产物目录 (out/, coverage/)\n- TypeScript 构建信息 (*.tsbuildinfo)\n- 各种包管理器的调试日志 (npm/yarn/pnpm-debug.log*)\n- 本地配置文件 (.env, .env.*)\n- 编辑器配置目录 (.vscode/)\n- 项目特定的记忆数据目录 (.sanshu-memory/)\n- 文档目录 (docs/)\n- 操作系统临时文件 (.DS_Store, Thumbs.db)\n\n这些修改有助于避免将机器相关文件和敏感配置提交到仓库。\n~~~\n\n### 116f2bb ~~~ fix(package): 更新仓库URL为真实发布地址\n\n修复package.json中的仓库URL，从临时测试地址\njuststrol/windsurf_account_manager更改为真实的发布仓库\nyuaotian/windsurf_manager_plugin，确保发布配置正确指向实际项目地址。\n\nfeat(scripts): 添加代理站点测试脚本并完善验证系统\n\n新增PowerShell脚本test-raw-github-proxy-sites.ps1用于测试\nGitHub原始内容代理站点可用性，同时更新验证脚本以兼容UTF-8 BOM\n处理，并调整文件路径引用和断言逻辑，确保更新系统各组件配置正确。\n~~~"
                }
 }
