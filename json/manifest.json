@@ -1,22 +1,22 @@
-{
-  "schemaVersion": 1,
-  "channel": "stable",
-  "generatedAt": "2026-04-29T13:36:36.698Z",
-  "announcement": {
-    "uuid": "initial-feed",
-    "title": "公告源初始化",
-    "body": "Windsurf Manager Plugin 公告和更新源已初始化。",
-    "level": "info"
-  },
-  "update": {
-    "latestVersion": "0.1.2",
-    "minVersion": "0.1.0",
-    "required": false,
-    "releaseTag": "windsurf-manager-v0.1.2",
-    "releaseUrl": "https://github.com/yuaotian/windsurf_manager_plugin/releases/tag/windsurf-manager-v0.1.2",
-    "assetName": "windsurf-manager-0.1.2.vsix",
-    "assetUrl": "https://github.com/yuaotian/windsurf_manager_plugin/releases/download/windsurf-manager-v0.1.2/windsurf-manager-0.1.2.vsix",
-    "sha256": "32c0652f9e4ee9c74f86ec2137a0daaa746b92c5ae642801ea1e4b406ba1e01f",
-    "notes": "# windsurf-manager v0.1.2\n\n## Commits\n\n### 7459471 初始化\n\n### 46efe59 初始化\n\n### 3f10624 ~~~ chore(build): 更新 .gitignore 配置\n\n添加了更多需要忽略的文件和目录，包括：\n- 构建产物目录 (out/, coverage/)\n- TypeScript 构建信息 (*.tsbuildinfo)\n- 各种包管理器的调试日志 (npm/yarn/pnpm-debug.log*)\n- 本地配置文件 (.env, .env.*)\n- 编辑器配置目录 (.vscode/)\n- 项目特定的记忆数据目录 (.sanshu-memory/)\n- 文档目录 (docs/)\n- 操作系统临时文件 (.DS_Store, Thumbs.db)\n\n这些修改有助于避免将机器相关文件和敏感配置提交到仓库。\n~~~\n\n### 116f2bb ~~~ fix(package): 更新仓库URL为真实发布地址\n\n修复package.json中的仓库URL，从临时测试地址\njuststrol/windsurf_account_manager更改为真实的发布仓库\nyuaotian/windsurf_manager_plugin，确保发布配置正确指向实际项目地址。\n\nfeat(scripts): 添加代理站点测试脚本并完善验证系统\n\n新增PowerShell脚本test-raw-github-proxy-sites.ps1用于测试\nGitHub原始内容代理站点可用性，同时更新验证脚本以兼容UTF-8 BOM\n处理，并调整文件路径引用和断言逻辑，确保更新系统各组件配置正确。\n~~~\n\n### 31e8253 ~~~ chore(release): 升级版本至 0.1.1 并优化发布脚本\n\n- 添加 .sanshu-memory/** 和 public-release-repo/** 到 .vscodeignore\n  避免本地协作记忆和公开发布仓库副本进入 VSIX\n- 升级 package.json 和 package-lock.json 版本至 0.1.1\n- 更新 public-release-repo manifest.json 中的版本信息和发布链接\n- 在 bump-version.mjs 中添加 compareVersions 函数，支持自定义版本验证\n- 在 publish-public-release.ps1 中添加版本控制参数（Bump、Version、\n  ReleaseFromRef），支持手动和自动版本递增\n- 优化 PowerShell 脚本中的路径解析和环境变量处理\n- 改进 Git 提交逻辑，仅提交 Manifest 文件避免意外提交其他更改\n~~~\n\n### 82b737e ~~~ chore(build): 更新发布脚本并调整仓库结构\n\n- 在 .gitignore 中添加 public-release-repo 目录忽略规则，\n  避免根仓库和内层仓库同时跟踪同一批文件\n- 删除 public-release-repo 子目录中的冗余配置文件\n- 为发布脚本添加 NoPushManifest 开关参数\n- 修复发布脚本中更新说明内容来源，统一使用 Release Notes\n- 优化重复发布时的 Release Notes 刷新逻辑\n- 调整自动推送更新源的条件判断逻辑\n- 规范化提交信息格式为 chore(release) 类型\n~~~\n\n### 0230469 ~~~ docs(icon): 更新图标文件\n\n更新了项目中的图标文件，替换为新的 icon.png 版本。\n~~~\n\n### 1da55f4 ~~~ feat: 添加配额面板自动刷新功能\n\n- 新增 aceSwitch.quotaPanel.autoRefreshAll 和\n  aceSwitch.quotaPanel.refreshIntervalMinutes 配置项\n- 实现配额面板的自动刷新控制UI，包括开关按钮和时间间隔设置\n- 支持异步并发刷新所有账号配额，最大并发数限制为3个\n- 添加中英文本地化支持和配额刷新状态显示\n- 实现定时自动刷新机制和手动刷新控制\n~~~\n\n### 4bdb8fa ~~~ feat(account-panel): 添加主题切换功能并重构CSS变量系统\n\n- 实现深色/浅色/自动主题切换功能，支持系统偏好设置\n- 重构CSS变量系统，采用RGB色彩模型统一管理颜色主题\n- 引入莫兰迪柔雾蓝色系作为默认配色方案\n- 更新状态消息、按钮、边框等组件的颜色引用方式\n- 添加主题切换UI控件，包含明亮、暗色和跟随系统选项\n- 支持VSCode主题变量集成，提升用户体验一致性\n~~~\n\n### bbee1a0 ~~~ fix(account-panel): 修复主题初始化时机问题\n\n主题状态需要先于 applyTheme 初始化，避免首次渲染时访问未初始化变量。\n将 currentTheme 变量声明移至函数作用域顶部，确保在首次调用 applyTheme 时变量已正确初始化。\n~~~"
-  }
+﻿{
+    "schemaVersion":  1,
+    "channel":  "stable",
+    "generatedAt":  "2026-04-29T15:20:54.368Z",
+    "announcement":  {
+                         "uuid":  "initial-feed",
+                         "title":  "公告源初始化",
+                         "body":  "Windsurf Manager Plugin 公告和更新源已初始化。",
+                         "level":  "info"
+                     },
+    "update":  {
+                   "latestVersion":  "0.1.3",
+                   "minVersion":  "0.1.0",
+                   "required":  false,
+                   "releaseTag":  "windsurf-manager-v0.1.3",
+                   "releaseUrl":  "https://github.com/yuaotian/windsurf_manager_plugin/releases/tag/windsurf-manager-v0.1.3",
+                   "assetName":  "windsurf-manager-0.1.3.vsix",
+                   "assetUrl":  "https://github.com/yuaotian/windsurf_manager_plugin/releases/download/windsurf-manager-v0.1.3/windsurf-manager-0.1.3.vsix",
+                   "sha256":  "08c03dff34bed30768af269caad7992a03e0291e7c89cb32be4d91d077fb649c",
+                   "notes":  "# windsurf-manager v0.1.3\n\n\u003e 范围：最近 3 天内最多 5 条提交\n\n## Commits\n\n### 0230469 ~~~ docs(icon): 更新图标文件\n\n更新了项目中的图标文件，替换为新的 icon.png 版本。\n~~~\n\n### 1da55f4 ~~~ feat: 添加配额面板自动刷新功能\n\n- 新增 aceSwitch.quotaPanel.autoRefreshAll 和\n  aceSwitch.quotaPanel.refreshIntervalMinutes 配置项\n- 实现配额面板的自动刷新控制UI，包括开关按钮和时间间隔设置\n- 支持异步并发刷新所有账号配额，最大并发数限制为3个\n- 添加中英文本地化支持和配额刷新状态显示\n- 实现定时自动刷新机制和手动刷新控制\n~~~\n\n### 4bdb8fa ~~~ feat(account-panel): 添加主题切换功能并重构CSS变量系统\n\n- 实现深色/浅色/自动主题切换功能，支持系统偏好设置\n- 重构CSS变量系统，采用RGB色彩模型统一管理颜色主题\n- 引入莫兰迪柔雾蓝色系作为默认配色方案\n- 更新状态消息、按钮、边框等组件的颜色引用方式\n- 添加主题切换UI控件，包含明亮、暗色和跟随系统选项\n- 支持VSCode主题变量集成，提升用户体验一致性\n~~~\n\n### bbee1a0 ~~~ fix(account-panel): 修复主题初始化时机问题\n\n主题状态需要先于 applyTheme 初始化，避免首次渲染时访问未初始化变量。\n将 currentTheme 变量声明移至函数作用域顶部，确保在首次调用 applyTheme 时变量已正确初始化。\n~~~\n\n### aacfc67 ~~~ chore(release): 升级版本至 0.1.2 并移除验证脚本\n\n- 将 package.json 和 package-lock.json 中的版本从 0.1.1 升级到 0.1.2\n- 移除所有验证相关的脚本文件，包括：\n  - verify-account-panel-i18n.mjs\n  - verify-auth-state-fixes.mjs\n  - verify-command-i18n.mjs\n  - verify-import-accounts.mjs\n  - verify-language-memory.mjs\n  - verify-logging.mjs\n  - verify-obfuscation-build.mjs\n  - verify-pro-account-type.mjs\n  - verify-quota-loading-optimization.mjs\n  - verify-quota-monitor.mjs\n  - verify-rebuild.ps1\n  - verify-status-quota-detail.mjs\n~~~"
+               }
 }
