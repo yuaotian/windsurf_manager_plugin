@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "channel": "stable",
-  "generatedAt": "2026-05-06T16:39:51.793Z",
+  "generatedAt": "2026-05-06T18:51:45.517Z",
   "announcement": {
     "uuid": "08c03dff34bed30768a",
     "title": "公告源初始化",
@@ -9,14 +9,14 @@
     "level": "info"
   },
   "update": {
-    "latestVersion": "0.1.3",
+    "latestVersion": "0.1.4",
     "minVersion": "0.1.3",
     "required": false,
-    "releaseTag": "windsurf-manager-v0.1.3",
-    "releaseUrl": "https://github.com/yuaotian/windsurf_manager_plugin/releases/tag/windsurf-manager-v0.1.3",
-    "assetName": "windsurf-manager-0.1.3.vsix",
-    "assetUrl": "https://github.com/yuaotian/windsurf_manager_plugin/releases/download/windsurf-manager-v0.1.3/windsurf-manager-0.1.3.vsix",
-    "sha256": "4cac68c93d3fdfc11044ebcf99c66f71944ace576b52f71a30b602dacbffbb52",
-    "notes": "# windsurf-manager v0.1.3\n\n> 范围：最近 3 天内最多 5 条提交\n\n## Commits\n\n### fe49a17 ~~~ feat(update): 更新下载服务优先解析CLI包装器并改进安装流程\n\n- 更新下载服务现在优先解析CLI可执行文件包装器，而非直接使用process.execPath\n- Windows平台使用windsurf.cmd作为可执行文件路径，提升兼容性\n- 移除受控终端逻辑，改为通过sendText明确显示安装命令，便于用户核对\n- 新增resolveCliExecutable方法用于查找合适的CLI可执行文件\n- 支持多平台的CLI可执行文件候选路径检测（Windows、macOS、Linux）\n- 改进PowerShell参数引用和POSIX参数转义逻辑\n~~~\n\n### 540ebaa fix(package): 更新发布者信息\n\n### 4003ce9 ~~~ feat(auth): 更新README文档中的功能描述\n\n移除过时的功能说明，添加账号信息存储方式的更新描述。\n\n移除的功能包括：\n- 启动时自动导入当前登录账号\n- 可配置切换后是否自动刷新窗口\n- 一键向本地Language Server注入Pro状态\n- 本地VSIX打包支持\n- GitHub Actions自动打包、自动Release、自动版本回写\n\n新增功能描述：账号信息保存在SQLite数据库\n~~~\n\n### 5606c2c ~~~ feat(accountSwitcher): 完善账号切换流程和错误处理\n\n- 添加对 WINDSURF 认证会话键的导入支持，包括生产环境和预发环境\n- 引入窗口重载延迟常量 WINDOW_RELOAD_DELAY_MS 设置为 1500ms\n- 将窗口重载逻辑封装为 scheduleWindowReload 方法，统一处理提示和重载\n- 实现 clearExistingAuthState 方法，同时执行运行时登出命令和清理数据库会话缓存\n- 改进错误处理机制，对机器 ID 重置失败进行中断处理\n- 增强会话注入错误检测，检查命令返回值中的错误信息\n- 在无刷新模式下优化错误处理，确保认证失败时正确返回错误状态\n- 添加 formatCommandError 方法，格式化 Windsurf 命令返回的错误信息\n- 导出认证相关的常量供其他模块使用\n~~~\n\n### 5ad0eeb ~~~ feat: 添加网络代理配置和配额查询性能监控\n\n- 新增 aceSwitch.network.proxy.enabled、autoDetect、url 等配置项\n- 支持 http、https、socks5、socks5h 协议的代理配置\n- 实现代理设置界面和自动检测功能\n- 重构配额查询逻辑，添加阶段性能监控和耗时统计\n- 优化 Webview 初始化流程，减少重复请求\n- 更新相关国际化文案和依赖包配置\n\n~~~"
+    "releaseTag": "windsurf-manager-v0.1.4",
+    "releaseUrl": "https://github.com/yuaotian/windsurf_manager_plugin/releases/tag/windsurf-manager-v0.1.4",
+    "assetName": "windsurf-manager-0.1.4.vsix",
+    "assetUrl": "https://github.com/yuaotian/windsurf_manager_plugin/releases/download/windsurf-manager-v0.1.4/windsurf-manager-0.1.4.vsix",
+    "sha256": "156a72c2de0523ab2c5d2523ac1d4d7dbe4e142d6bf318543873a7d81b8cfa82",
+    "notes": "# windsurf-manager v0.1.4\n\n> 范围：最近 3 天内最多 5 条提交\n\n## Commits\n\n### 5ad0eeb ~~~ feat: 添加网络代理配置和配额查询性能监控\n\n- 新增 aceSwitch.network.proxy.enabled、autoDetect、url 等配置项\n- 支持 http、https、socks5、socks5h 协议的代理配置\n- 实现代理设置界面和自动检测功能\n- 重构配额查询逻辑，添加阶段性能监控和耗时统计\n- 优化 Webview 初始化流程，减少重复请求\n- 更新相关国际化文案和依赖包配置\n\n~~~\n\n### b864aac ~~~ feat(version): 引入发布版本基准计算机制\n\n新增发布版本基准计算功能，支持从 package.json、manifest 文件和\n已发布的 tag 中选择最高版本作为递增基准，避免版本冲突问题。\n\n新增 verify:release-version-base 验证脚本确保版本计算逻辑正确，\n同时为 bump-version.mjs 和 publish-public-release.ps1 添加了\n--base-version 参数和 RELEASE_BASE_VERSION 环境变量支持。\n\n发布脚本现在会在打包完成后自动提交版本变更到 package.json 和\npackage-lock.json 文件，并提供 NoCommitVersion 选项跳过提交。\n~~~\n\n### b48d361 ~~~ feat(package): 添加账户面板UI验证脚本\n\n新增 verify:account-panel-ui 验证脚本用于检查账户面板的用户界面，\n该脚本位于 scripts/verify-account-panel-ui.mjs，与其他验证脚本保持一致的命名规范。\n~~~\n\n### bcbf47a ~~~ chore(package): 更新版本号从0.1.2到0.1.3\n\n更新package.json中的版本号以发布新版本\n~~~\n\n### 68e1367 ~~~ build(package): 添加账户面板截图验证脚本\n\n新增 verify:account-panel-screenshot 脚本用于验证账户面板的截图功能，\n该脚本通过 node scripts/verify-account-panel-screenshot.mjs 执行验证逻辑。\n~~~"
   }
 }
